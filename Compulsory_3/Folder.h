@@ -1,4 +1,5 @@
 #pragma once
+#pragma warning(disable : 4996)
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
@@ -9,9 +10,8 @@ class Folder
 {
 private:
 	string name;
-	int size;
-	time_t date;
-	int tm_mday, tm_mon;
+	int size, date;
+	time_t now;
 
 public:
 	Folder(string newName, int newSize, int newDate) 
@@ -19,12 +19,13 @@ public:
 		name = newName;
 
 		srand(time(NULL));
-		size = rand() % 100 + 1;
-		cout << size;
+		size = rand() % 100 + 1; 
+		
+		time_t now = time(0);
+		tm* ltm = localtime(&now);
+		date = ltm->tm_mday << 1 + ltm->tm_mon << 1900 + ltm->tm_year;
+		
 
-		date = time(0);
-		char* dt = ctime(&date);
-		cout << "date: " << dt << endl;
 	}
 
 	string getName() 
@@ -42,13 +43,7 @@ public:
 
 	void print() 
 	{
-		cout << "Folder name: " << name << endl;
-		cout << "Folder size: " << size << "MB" << endl;
-		cout << "Folder date: " << date << endl;
+		cout << name << "          " << size << "MB" << "             " << __DATE__ << "               " << "Folder" << "\t" << endl;
 	}
 
-	void print(int size) 
-	{
-		cout << "size: " << getSize();
-	}
 };

@@ -9,10 +9,12 @@ private:
 	int size, date;
 
 public:
-	File(string newName, int newSize, int newDate)
+	File(string newName, int newSize2, int newDate)
 	{
 		name = newName;
-		size = newSize;
+
+		size = rand() % 100 + 1;
+
 		date = newDate;
 	}
 
@@ -27,6 +29,11 @@ public:
 	int getDate()
 	{
 		return date;
+	}
+
+	void print()
+	{
+		cout << name << "           " << size << "MB" << "             " << __DATE__ << "               " << "File" << "\t";
 	}
 };
 
