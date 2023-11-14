@@ -11,20 +11,15 @@ class Folder
 private:
 	string name;
 	int size, date;
-	time_t now;
 
 public:
 	Folder(string newName, int newSize, int newDate) 
 	{
 		name = newName;
 
-		srand(time(NULL));
 		size = rand() % 100 + 1; 
 		
-		time_t now = time(0);
-		tm* ltm = localtime(&now);
-		date = ltm->tm_mday << 1 + ltm->tm_mon << 1900 + ltm->tm_year;
-		
+		date = newDate;
 
 	}
 
