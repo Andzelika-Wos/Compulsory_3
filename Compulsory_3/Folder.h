@@ -13,7 +13,6 @@ class Folder
 {
 private:
 	string name;
-	string makeName;
 	int size, date;
 
 public:
@@ -26,23 +25,9 @@ public:
 		date = newDate;
 	}
 
-
-	int MakeFolder(string makeName, int newSize, int newDate) 
-		{
-		cout << "Type new folder name: ";
-		cin >> makeName;
-		cout << "New Folder:";
-		cout << makeName << "       " << size << "MB" << "       " << __DATE__ << "     " << "Folder" << "\t" << endl;
-		return 0;
-		}
-
 	string getName() 
 	{
 		return name;
-	}
-	string getMakeName() 
-	{
-		return makeName;
 	}
 	int getSize() 
 	{
@@ -56,12 +41,6 @@ public:
 	void print() 
 	{
 		cout << name << "          " << size << "MB" << "             " << __DATE__ << "               " << "Folder" << "\t" << endl;
-	}
-
-	void printfolder() 
-	{
-		cin >> makeName;
-		cout << makeName << "       " << size << "MB" << "       " << __DATE__ << "     " << "Folder" << "\t" << endl;
 	}
 
 };

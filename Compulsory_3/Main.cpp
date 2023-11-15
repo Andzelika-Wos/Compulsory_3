@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Folder.h"
 #include "File.h"
-#include "Function_Folder.h"
+#include "Functions.h"
 using namespace std;
 
 int choice;
@@ -28,6 +28,8 @@ int main()
 			cout << "\n";
 			functionFolder();
 			functionInFolder();
+			string folders();
+			string files();
 			break;
 
 		case 2:
