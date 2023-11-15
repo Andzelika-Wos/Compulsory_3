@@ -1,22 +1,11 @@
 #include <iostream>
 #include "Folder.h"
 #include "File.h"
+#include "Function_Folder.h"
 using namespace std;
 
 int choice;
 bool isRunning = true;
-
-int functionFolder()
-{
-	cout << "Name:               " << "Size:            " << "Date:                     " << "Type: " << "\n";
-
-	Folder withAll("Everything", 0, 0);
-	withAll.print();
-
-
-	
-	return 0;
-}
 
 int main() 
 {
@@ -34,7 +23,7 @@ int main()
 		case 1:
 			cout << "\n";
 			functionFolder();
-
+			functionInFolder();
 			break;
 		
 		case 2:
@@ -43,8 +32,6 @@ int main()
 			
 		}
 	}
-
-
 
 
 }

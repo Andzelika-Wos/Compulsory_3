@@ -133,6 +133,7 @@
     <ClInclude Include="..\..\Task 4 - class Student\Task 4 - class Student\student.h" />
     <ClInclude Include="File.h" />
     <ClInclude Include="Folder.h" />
+    <ClInclude Include="Function_Folder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
