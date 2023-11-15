@@ -2,6 +2,9 @@
 #include <iostream>
 using namespace std;
 
+/// <summary>
+/// class File that stores a simple file with date, random size of max. 100MB and a given name
+/// </summary>
 class File
 {
 private:
@@ -33,7 +36,7 @@ public:
 
 	void print()
 	{
-		cout << name << "           " << size << "MB" << "             " << __DATE__ << "               " << "File" << "\t";
+		cout << name << "           " << size << "MB" << "             " << __DATE__ << "               " << "File" << "\t" << endl;
 	}
 };
 

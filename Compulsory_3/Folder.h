@@ -6,11 +6,14 @@
 #include <ctime>
 using namespace std;
 
+/// <summary>
+/// class Folder that stores a simple folder with date, random size of max. 100MB and a given name
+/// </summary>
 class Folder 
 {
 private:
 	string name;
-	string makeName = " ";
+	string makeName;
 	int size, date;
 
 public:
@@ -23,10 +26,13 @@ public:
 		date = newDate;
 	}
 
-	int MakeFolder() 
+
+	int MakeFolder(string makeName, int newSize, int newDate) 
 		{
 		cout << "Type new folder name: ";
 		cin >> makeName;
+		cout << "New Folder:";
+		cout << makeName << "       " << size << "MB" << "       " << __DATE__ << "     " << "Folder" << "\t" << endl;
 		return 0;
 		}
 
@@ -54,6 +60,7 @@ public:
 
 	void printfolder() 
 	{
+		cin >> makeName;
 		cout << makeName << "       " << size << "MB" << "       " << __DATE__ << "     " << "Folder" << "\t" << endl;
 	}
 

@@ -7,6 +7,10 @@ using namespace std;
 int choice;
 bool isRunning = true;
 
+/// <summary>
+/// The main function that lets you access all the different Folders and Files
+/// </summary>
+/// <returns></returns>
 int main() 
 {
 	
@@ -25,14 +29,19 @@ int main()
 			functionFolder();
 			functionInFolder();
 			break;
-		
+
 		case 2:
 			isRunning = false;
 			break;
 			
+		default:
+			cout << "That was neither 1 nor 2?\n"; 
+			cout << "please try again ^^\n";  
+			cin.clear(); 
+			cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
 		}
 	}
 
-
+	return 0;
 }
 
